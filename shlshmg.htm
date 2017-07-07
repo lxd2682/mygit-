@@ -47,16 +47,34 @@ document.oncontextmenu=stop;
  .custom{
         -webkit-filter:opacity(.8) blur(2px) drop-shadow(2px 2px 2px #ff0);
       }			
-
+.cover {
+    width: 1280px;
+    height: 800px;
+    overflow: hidden;
+    position:relative;
+}
+.cover:after{
+  position:absolute;
+  content:'';
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  box-shadow:0 0 40px 40px rgba(245,245,245,.5) inset;
+}
 		</style>
 	</head>
 
 	<body>
 		<div class="main">
                                          <div  class="content"> 
-    <div class="custom"> 
+    <div class="custom">
+<header>
+    <div class="cover"> 
 <TABLE width="1280" height="800" background="http://i.imgur.com/MNEZJ59.jpg" border="0"><TBODY><TR><TD>
 <EMBED style="Z-INDEX: 0" height=800 type=application/x-shockwave-flash width=1280 src=http://dashan.gotoip1.com/tpll/qhbkwtzd.swf allownetworking="internal" flashvars="tpt=https://ooo.0o0.ooo/2017/07/06/&amp;tp=595dd11cf0566.jpg|595dd1227bb5b.jpg|595dd1261fa72.jpg|595dd12a3572c.jpg|595dd12b72d1b.jpg|595dd12c319c4.jpg&amp;cc=1280*800" allowscriptaccess="never" quality="high" invokeurls="false" wmode="transparent"></TD></TR></TBODY></TABLE>
+    </div>
+</header>
 </div>
 </div> 
 </div>  
