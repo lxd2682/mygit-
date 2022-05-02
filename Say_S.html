@@ -121,6 +121,15 @@ onMouseOut="document.all.menulayer_1.style.visibility='hidden'">
 </TD></TR></TBODY></TABLE></div>
 
 <script type="text/javascript">
+window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function() {
+if (window.orientation === 180 || window.orientation === 0) {
+alert('竖屏状态！');
+}
+if (window.orientation === 90 || window.orientation === -90 ){
+alert('横屏状态！');
+}
+}, false);	
+	
 $(function() {
 function parseLyric(text) {
 //按行分割歌词
