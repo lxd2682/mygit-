@@ -6,6 +6,28 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content=always name=referrer>
 <title>&nbsp;`·.¸¸.·´¯`·.¸¸.·´¯Say Something -- A Great Big World & Christina Aguilera`·.¸¸.·´¯`·.¸¸.·´¯</title>
+	<link rel="stylesheet" media="all and (orientation:portrait)" href="portrait.css">
+	<link rel="stylesheet" media="all and (orientation:landscape)" href="landscape.css">
+	<script>
+const evt = "onorientationchange" in window ? "orientationchange" : "resize"; 
+window.addEventListener(evt, function () { 
+if (window.orientation === 90 || window.orientation === -90) {
+screen_width = height;
+contentDOM.style.width = height + 'px';
+contentDOM.style.height = width + 'px';
+contentDOM.style.top = '0px';
+contentDOM.style.left = '0px';
+contentDOM.style.transform = 'none'; 
+}else{ 
+screen_width = height;
+contentDOM.style.width = height + 'px';
+contentDOM.style.height = width + 'px';
+contentDOM.style.top = (height - width) / 2 + 'px';
+contentDOM.style.left = 0 - (height - width) / 2 + 'px';
+contentDOM.style.transform = 'rotate(90deg)';
+}
+}, false);
+       </script>
 <style>
 * {
 margin: 0;
