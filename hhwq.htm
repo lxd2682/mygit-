@@ -1,0 +1,265 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml xmlns:bd=http://www.baidu.com/2010/xbdml>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content=always name=referrer>
+<title>&nbsp;`·.¸¸.·´¯`·.¸¸.·´¯后会无期`·.¸¸.·´¯`·.¸¸.·´¯</title>
+<style>
+* {
+margin: 0;
+padding: 0;
+}
+.bg {
+/* 歌词调整区 */
+width: 100%;/* 歌词显示盒子宽 */
+height: 120px;/* 歌词显示盒子高度，需要多显示几行歌词相应调大即可 */
+/* background-color:#333; */ /* 歌词背景颜色 */
+margin: 30px auto;
+color: black;/* 歌词默认颜色,灰色 */
+font-size: 20px;/* 歌词字体默认大小 */
+overflow: hidden;
+position: relative;
+font-family: "华文楷体";
+Z-INDEX: 999;
+}
+.bg ul {
+width: 100%;
+position: absolute;
+top: 0;
+left: 0;
+list-style: none;
+}
+.bg ul li {
+width: 100%;
+height: 30px;
+line-height: 30px;
+text-align: center;
+}
+.bg ul li.active {
+/* 歌词高亮滚动区 */
+color: red;/* 歌词滚动高亮颜色 */
+/* font-weight: bold; *//* 文本加粗，不要，太丑了！ */
+font-size: 30px; /* 歌词滚动行文字大小 */
+font-family: "华文行楷";
+text-shadow:3px 3px 3px #fff;
+}
+audio {
+/* 播放器调整区 */
+width: 1000px; /* 调整播放器宽度 */
+height: 52px;/* 调整播放器高度 */
+/* 其他要修改播放器在这里修改 */
+Z-INDEX: 999; 
+}
+.one {    
+    margin: 0 auto;    
+    height: 600px;    
+    writing-mode: vertical-rl;
+    writing-mode: tb-rl;   
+}
+</style>
+</head>
+<body>
+﻿<script>
+function stop(){
+return false;
+}
+document.oncontextmenu=stop;
+</script>
+</head>
+<body>
+
+<div align="center">
+<table width="1350" bordercolorlight="#DFDCB5" cellspacing="40" cellpadding="4" background="https://s3.bmp.ovh/imgs/2022/04/22/3663467fbb0ef45e.jpg
+" bordercolordark="#C1B77B" style="POSITION:relative; margin-top: 20px;">
+<tr>
+<td>
+<div align="center">
+<table border="0" width="100%" bordercolorlight="#DFDCB5" cellspacing="5" cellpadding="0" background="https://img.photouploads.com/file/PhotoUploads-com/Mug6.gif" bordercolordark="#C1B77B">
+<tr>
+<td>
+<div align="center">
+<table border="0" width="100%" cellspacing="54" cellpadding="0" background="https://img.photouploads.com/file/PhotoUploads-com/MugL.jpg">
+<tr>
+<td>
+<div align="center">
+<table border="0" width="100%" bordercolorlight="#DFDCB5" cellspacing="5" cellpadding="0" background="https://img.photouploads.com/file/PhotoUploads-com/Mug6.gif" bordercolordark="#C1B77B">
+<tr>
+<td>
+<div align="center">
+<table height="720" width="1280" bordercolorlight="#DFDCB5" cellspacing="0" cellpadding="0" background="https://s3.bmp.ovh/imgs/2022/04/22/3663467fbb0ef45e.jpg" bordercolordark="0">
+<tr>
+<td width="100%">
+<div style="Z-INDEX: 999; position: absolute; top: +800px; left: +110px">
+<FONT color=#f5f5f5 face=微软雅黑 size=2>DIY笑看风雨</FONT></div>
+
+<table height="720" width="1280" background="https://img.photouploads.com/file/PhotoUploads-com/MugX.jpg" >
+<tr>
+<td style="POSITION: absolute">
+<div id="imgs" style="line-height:0">
+  <div id="tu1" class="tu"></div>
+  <div id="tu2" class="tu"></div>
+  <div id="tu3" class="tu"></div>
+<script type="text/javascript">
+// 替换class达到淡入淡出的效果
+function fadeIn(e) {
+  e.className = "tu fadein"
+};
+
+function fadeOut(e) {
+  e.className = "tu"
+};
+//申明图片数组中当前的轮播图片
+cur_img = document.getElementById("imgs").children.length - 1;
+//图片轮播函数
+function turnImgs(imgs) {
+    var imgs = document.getElementById("imgs").children;
+    if (cur_img == 0) {
+      fadeOut(imgs[cur_img]);
+      cur_img = imgs.length - 1;
+      fadeIn(imgs[cur_img]);
+    } else {
+      fadeOut(imgs[cur_img]);
+      fadeIn(imgs[cur_img - 1]);
+      cur_img--;
+    }
+  }
+  //设置轮播间隔
+setInterval(turnImgs, 7200);
+</script>
+</div>
+
+<div style="Z-INDEX: 999; POSITION: absolute; WIDTH: 1280px; TOP: 545px;">
+<center>
+<div class="bg"></div> 
+<audio autoplay="autoplay" src="https://kvideo01.youju.sohu.com/e35054ce-61f4-4949-80d0-58a8be79280d2_0_0.mp4" controls></audio></center>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+</div>
+</td></tr></table>
+
+<script type="text/javascript">
+$(function() {
+function parseLyric(text) {
+//按行分割歌词
+let lyricArr = text.split('\n');
+//console.log(lyricArr)//0: "[ti:七里香]" "[ar:周杰伦]"...
+let result = []; //新建一个数组存放最后结果
+//遍历分割后的歌词数组，将格式化后的时间节点，歌词填充到result数组
+for (i = 0; i < lyricArr.length; i++) {
+let playTimeArr = lyricArr[i].match(/\[\d{2}:\d{2}((\.|\:)\d{2})\]/g); //正则匹配播放时间
+let lineLyric = "";
+if (lyricArr[i].split(playTimeArr).length > 0) {
+lineLyric = lyricArr[i].split(playTimeArr);
+}
+if (playTimeArr != null) {
+for (let j = 0; j < playTimeArr.length; j++) {
+let time = playTimeArr[j].substring(1, playTimeArr[j].indexOf("]")).split(":");
+//数组填充
+result.push({
+time: (parseInt(time[0]) * 60 + parseFloat(time[1])).toFixed(4),
+content: String(lineLyric).substr(1)
+});
+}
+}
+}
+return result;
+}
+// 这里请按照格式放入相应歌词--开始
+// 格式可能看着很复杂,其实是根据lrc歌词文件换句前加入\n 换行符,然后删除多余空行.即可!
+let text = "[ar:孙露]\n[ti:后会无期]\n[by:]\n[al:]\n[00:04.94]作词：韩寒\n[00:08.22]作曲：Arthur Kent、Dee Sylvia\n[00:18.23]当一艘船沉入海底\n[00:25.10]当一个人成了谜\n[00:32.17]你不知道他们为何离去\n[00:38.79]那声再见竟是他最后一句\n[00:46.20]当一辆车消失天际\n[00:53.32]当一个人成了谜\n[01:00.40]你不知道\n[01:03.51]他们为何离去\n[01:07.08]就像你不知道这竟是结局\n[01:14.33]在每个繁星抛弃银河的夜里\n[01:21.37]我会告别\n[01:23.78]告别我自己\n[01:28.29]因为我不知道\n[01:31.74]我也不想知道\n[01:35.55]和相聚之间的距离\n[01:42.77]当一辆车消失天际\n[01:49.80]当一个人成了谜\n[01:56.97]你不知道他们为何离去\n[02:03.49]就像你不知道这竟是结局\n[02:10.83]在每个银河坠入山谷的梦里\n[02:18.11]我会醒来\n[02:20.37]也忘记梦境\n[02:24.74]因为你不知道\n[02:28.21]你也不会知道\n[02:32.02]逝去的就已经失去\n[02:39.31]当一艘船沉入海底\n[02:46.23]当一个人成了谜\n[02:53.45]你不知道他们为何离去\n[03:00.09]那声再见竟是他最后一句\n[03:07.48]当一辆车消失天际\n[03:14.56]当一个人成了谜\n[03:21.49]你不知道他们为何离去\n[03:28.35]就像你不知道这竟是结局";
+// 这里请按照格式放入相应歌词--结束
+let audio = document.querySelector('audio');
+let result = parseLyric(text); //执行lyc解析
+// 把生成的数据显示到界面上去
+let $ul = $("<ul></ul>");
+for (let i = 0; i < result.length; i++) {
+let $li = $("<li></li>").text(result[i].content);
+$ul.append($li);
+}
+$(".bg").append($ul);
+let lineNo = 0; // 当前行歌词
+let preLine =1; // 当播放6行后开始滚动歌词
+let lineHeight = -30; // 每次滚动的距离
+// 滚动播放 歌词高亮 增加类名active
+function highLight() {
+let $li = $("li");
+$li.eq(lineNo).addClass("active").siblings().removeClass("active");
+if (lineNo > preLine) {
+$ul.stop(true, true).animate({ top: (lineNo - preLine) * lineHeight });
+}
+}
+highLight();
+// 播放的时候不断渲染
+audio.addEventListener("timeupdate", function() {
+if (lineNo == result.length) return;
+if ($("li").eq(0).hasClass("active")) {
+$("ul").css("top", "0");
+}
+lineNo =getLineNo(audio.currentTime);
+highLight();
+lineNo++;
+});
+// 当快进或者倒退的时候，找到最近的后面那个result[i].time
+function getLineNo(currentTime) {
+if (currentTime >= parseFloat(result[lineNo].time)) {
+// 快进
+for (let i = result.length - 1; i >= lineNo; i--) {
+if (currentTime >= parseFloat(result[i].time)) {
+return i;
+}
+}
+} else {
+// 后退
+for (let i = 0; i <= lineNo; i++) {
+if (currentTime <= parseFloat(result[i].time)) {
+return i - 1;
+}
+}
+}
+}
+//播放结束自动回到开头
+audio.addEventListener("ended", function() {
+lineNo = 0;
+highLight();
+audio.play();
+$("ul").css("top", "0");
+});
+});
+</script>
+</td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr></table></div>
+
+<style type="text/css">
+.tu {
+  position: absolute;
+  margin: 0 auto;
+  width: 1280px;
+  height: 720px;
+  -webkit-transition: opacity 2s linear;
+  -moz-transition: opacity 2s linear;
+  -o-transition: opacity 2s linear;
+  transition: opacity 2s linear;
+  opacity:0;
+}
+
+#tu1 {
+  background: url(https://img.photouploads.com/file/PhotoUploads-com/MugX.jpg) no-repeat;
+  background-size: cover;  
+}
+
+#tu2 {
+  background: url(https://img.photouploads.com/file/PhotoUploads-com/Mug3.jpg) no-repeat;
+  background-size: cover;
+}
+#tu3 {
+  background: url(https://img.photouploads.com/file/PhotoUploads-com/Mug9.jpg) no-repeat;
+  background-size: cover;
+}
+
+.fadein {
+  opacity: 100;
+  filter: alpha(opacity=100);
+}
+	</style>
+</body>
+</htnl>
