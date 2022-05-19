@@ -1,466 +1,237 @@
-﻿<script>
-function stop(){
-return false;
+ <!DOCTYPE html>
+ <html>
+     <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">	
+		<link rel="stylesheet" href="https://tympanus.net/Development/AudioPlayer/css/audioplayer.css" />
+
+         <title>¯`·.¸¸.·´¯ 国语老歌 ¯`·.¸¸.·´¯</title>
+	<style>
+    #box1{
+		width: 1280px;
+		height: 800px;
+		margin: 20px auto;
+		position: relative;
+         }
+    #container{
+		width: 100%;
+		height: 100%;
+		float: left;
+		background-color: black;
+          position: absolute;
+	}
+			
+	#right .item{
+          margin: 10px;
+		list-style: none;
+		text-align: left;
+		height: 36px;
+		line-height: 36px;
+		font-size: 30px;
+          cursor: pointer;
+          text-shadow: 0 0 5px Yellow, 0 0 10px Orange, 0 0 15px Gold, 0 0 20px Maroon;
+          font-family: "华文楷体","思源黑体",sans-serif;
+	}
+			
+	#right .item1{
+          margin: 10px;
+		list-style: none;
+		text-align: center;
+		height: 50px;
+		line-height: 50px;
+		font-size: 40px;
+          background-color: rgba(245,245,245,.7);
+          font-family: "华文新魏","思源黑体",sans-serif;
+	}
+			
+			
+	@media screen and (max-width: 960px){
+			  /* 手机端CSS代码 */
+		#left{
+			width: 100%;
+			height: 100%;
+		 }
+			  
+	   #right{
+			width: 100%;
+			height: 100%;
+			color: Black;
+			text-align: center;
+		 }
+	}
+			 
+	@media screen and (min-width: 960px){
+			  /* 电脑端CSS代码 */
+	    #left{
+			 width: 100%;
+			 height: 100%;
+		     float: left;
+		 }  
+	   #right{
+		width: 36%;
+		height: 80%;
+		color: Black;
+		text-align: center;
+		float: left;
+                background:rgba(0,0,0,0);
+                position: absolute;
+		}
+			  
+	   #right .item:first-child{
+		font-size: 2.5rem;
+		margin-top: 10px;
+                
+			}
+        }
+			
+	.active{
+           color: red;
+	   background-color:0 0 20px Black;
+		}
+	</style>
+<style type="text/css">
+.a {
+    display:block;
+    line-height:160px;
+    width:160px;
+    margin:0 auto;
+    text-align:center;
+    -webkit-transition:all 2s ease-in-out;
+    -moz-transition:all 2s ease-in-out;
+    -o-transition:all 2s ease-in-out;
+    -ms-transition:all 2s ease-in-out;    
+    transition:all 2s ease-in-out;
 }
-document.oncontextmenu=stop;
+.a:hover {
+    -webkit-transform:rotate(720deg) scale(4,4);
+    -moz-transform:rotate(720deg) scale(4,4);
+    -o-transform:rotate(720deg) scale(4,4);
+    -ms-transform:rotate(720deg) scale(4,4);
+    transform:rotate(720deg) scale(4,4);        
+}
+</style>
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+.flash{width:160px;height:160px;overflow:hidden;position:relative;margin:0 auto;}
+.flash li{position:absolute;left:0;top:0;width:160px;height:160px;}
+.opacity img{opacity: 0.5;}
+</style>
+</head>
+<body>
+         <div id="box1">
+ <div id="container">
+	<video id="left" poster="https://img.photouploads.com/file/PhotoUploads-com/MP1b.jpg" controls="controls" autoplay="autoplay">
+            <source src="https://mp3app.haoge500.com/new/2004/07-17/51828.mp3" type="video/mp4">
+	</video>
+	<div id="right">
+		<div class="item1">播放列表</div>
+		<div class="item" value="https://mp3app.haoge500.com/new/2004/07-17/51828.mp3">老情歌--吕方</div>
+		<div class="item" value="https://mp3app.haoge500.com/hot/2004/07-13/11835.mp3">为什么你背着我爱别人--许志安</div>
+		<div class="item" value="https://mp3app.haoge500.com/upload/rank/20220201/9145bd951514587aadfb25cb08e1ae76.mp3">变心的翅膀--陈明真</div>
+		<div class="item" value="https://mp3app.haoge500.com/upload/rank/20220114/c45c93138cae5c09826157f1854bf1fd.mp3">我只在乎你--邓丽君</div>
+		<div class="item" value="https://mp3app.haoge500.com/mp3/22/21419.mp3">为情所困--梁朝伟</div>
+		<div class="item" value="https://mp3app.haoge500.com/upload/rank/20211216/cbf932e71df254899f3779fbd1d24020.mp3">我曾用心爱着你--潘美辰</div>
+		<div class="item" value="https://mp3app.haoge500.com/hot/2004/07-13/4964.mp3">童年--张艾嘉</div>
+	</div>
+ </div>
+<div style="Z-INDEX: 11; position: absolute; top: +376px; left: +642px">
+<img width="40"  src="https://img.photouploads.com/file/PhotoUploads-com/MPCE.png" height="39"></A>
+</div>
+
+<div style="Z-INDEX: 555; position: absolute; top: +290px; left: +960px">
+<a class="a">
+<div class="flash">
+     <ul>
+		<li><img width="160" height="160" height="160" alt="老情歌--吕方" src="https://img.photouploads.com/file/PhotoUploads-com/MPzh.jpg" /></li>
+	     <li><img width="160" height="160" height="160" alt="为什么你背着我爱别人--许志安" src="https://img.photouploads.com/file/PhotoUploads-com/MPzI.jpg" /></li>
+		<li><img width="160" height="160" height="160" alt="变心的翅膀--陈明真" src="https://img.photouploads.com/file/PhotoUploads-com/MPzn.jpg" /></li>
+	     <li><img width="160" height="160" height="160" alt="我只在乎你--邓丽君" src="https://img.photouploads.com/file/PhotoUploads-com/MPzz.jpg" /></li>
+		<li><img width="160" height="160" height="160" alt="为情所困--梁朝伟" src="https://img.photouploads.com/file/PhotoUploads-com/MPzB.jpg" /></li>
+	     <li><img width="160" height="160" height="160" alt="我曾用心爱着你--潘美辰" src="https://img.photouploads.com/file/PhotoUploads-com/MPzD.jpg" /></li>
+	     <li><img width="160" height="160" height="160" alt="童年--张艾嘉" src="https://img.photouploads.com/file/PhotoUploads-com/MPBh.jpg" /></li>
+	</ul>
+</div> 
+</a>
+<script type="text/javascript" src="https://www.51qianduan.com/uploadfile/article/2007/29/12434/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.flash').imgtransition({
+		speed:5000,  //图片切换时间
+		animate:1000 //图片切换过渡时间
+	});
+});
 </script>
-<title>&nbsp;`·.¸¸.·´¯`·.¸¸.·´¯群星《中国十大国语老歌.女人篇HD3CD》`·.¸¸.·´¯`·.¸¸.·´¯</title>
+</div>
+        </div>
 
-<DIV align=center><TABLE borderColor=0 cellSpacing=0 borderColorDark=0 cellPadding=0 width="1280" borderColorLight=0 height="853" background="https://i.loli.net/2017/09/10/59b4e9dd02cdb.jpg" border=0><TBODY><TR><TD style="POSITION: relative; TOP: 20px"> 
+            <script>
+var video = document.getElementById("left");
+		var list = document.getElementsByClassName("item");
+		var len = list.length; // 播放列表的长度
+		var url = [];
+	    var cur =0; // 当前播放的视频
+		var pre=0;
+		list[cur].classList.add("active");
+		for(var i=1;i<len;i++){
+		  url[i] = list[i].getAttribute("value");
+		}
+		//视频切换 
+	  for(var i=0;i<len;i++){
+		list[i].onclick = function(){
+		   for(var j=0;j<len;j++){
+		      if(list[j] == this){
+               video.setAttribute("src",this.getAttribute("value")); //获取src路径
+	           video.setAttribute('autoplay','autoplay');//自动播放
+			   list[pre].classList.remove("active")
+		       list[j].classList.add("active");
+			    pre=j;
+		        cur=j;//定位下一播放位置
+		        }
+		          }
+		      }
+		     }   
+		//监听顺序播放	 
+		 video.addEventListener('ended', function () {
+			    list[pre].classList.remove("active"); //先移除样式
+			    cur=(cur+1)%3;
+				pre=cur;
+				list[cur].classList.add("active");  //添加样式
+		        video.setAttribute("src",list[cur].getAttribute("value"));
+				 video.setAttribute('autoplay','autoplay');
+		    }, false);
+            </script>
+<script type="text/javascript">
+//图片简单切换调用语句 imgtransition({speed: 3000, animate: 1000}); 
+$.fn.imgtransition = function(o){
+	var defaults = {
+		speed : 5000,
+		animate : 1000
+	};
+	o = $.extend(defaults, o);
 
+	return this.each(function(){
+		var arr_e = $("li", this);
+		arr_e.css({position: "absolute"});
+		arr_e.parent().css({margin: "0", padding: "0", "list-style": "none", overflow: "hidden"});
 
-<DIV style="Z-INDEX: 1; position: absolute; top: -20px; left: +0px"><EMBED height=873 type=application/x-shockwave-flash width=1280 src=http://cartoon.nie.163.com/upfile/author_id=92&amp;urs=88llbb@163.com&amp;art_id=18135&amp;fn=production.swf flashvars="gqdz=http://rm01.sycdn.kuwo.cn/resource/n1/49/70/3490443296.mp3|http://ra01.sycdn.kuwo.cn/resource/n2/128/30/78/860586963.mp3|http://ra01.sycdn.kuwo.cn/resource/n1/128/57/60/4145360593.mp3|http://ra01.sycdn.kuwo.cn/resource/n3/128/45/73/3396236479.mp3|http://ra01.sycdn.kuwo.cn/resource/n1/128/7/62/2602880318.mp3|http://rc01.sycdn.kuwo.cn/resource/n1/74/1/2947958595.mp3&amp;mc=征服 那英|太委屈 陶晶莹|美丽心情 本多RURU|我只在乎你 邓丽君|女人花 梅艳芳|风中的承诺 李翊君&amp;gc=[00:00.15]征服
-[00:15.25]词曲：袁惟仁
-[00:18.12]编曲：王继康
-[00:22.25]演唱：那英
-[00:23.52]终于你找到一个方式
-[00:26.28]分出了胜负
-[00:30.75]输蠃的代价
-[00:32.45]是彼此粉身碎骨
-[00:39.38]外表健康的你心里
-[00:41.54]伤痕无数
-[00:46.60]顽强的我是
-[00:48.16]这场战役的俘虏
-[00:53.73]就这样被你征服
-[00:57.37]切断了所有退路
-[01:01.35]我的心情是坚固
-[01:05.26]我的决定是糊涂
-[01:09.17]就这样被你征服
-[01:13.14]喝下你藏好的毒
-[01:16.89]我的剧情已落幕
-[01:20.82]我的爱恨已入土
-[01:57.89]终于我明白俩人要的
-[02:00.45]是一个结束
-[02:04.99]所有的辩解
-[02:07.04]都让对方以为是企图
-[02:13.72]放一把火烧掉
-[02:15.17]你送我的礼物
-[02:20.97]却浇不熄我胸口
-[02:23.58]灼热的愤怒
-[02:28.04]就这样被你征服
-[02:31.85]切断了所有退路
-[02:35.56]我的心情是坚固
-[02:39.43]我的决定是糊涂
-[02:43.60]就这样被你征服
-[02:47.61]喝下你藏好的毒
-[02:51.23]我的剧情已落幕
-[02:55.18]我的爱恨已入土
-[03:01.11]你如果经过我的坟墓
-[03:08.86]你可以双手合十
-[03:11.52]为我祝福
-[03:17.32]就这样被你征服
-[03:21.08]切断了所有退路
-[03:24.74]我的心情是坚固
-[03:28.71]我的决定是糊涂
-[03:32.92]就这样被你征服
-[03:36.72]喝下你藏好的毒
-[03:40.48]我的剧情已落幕
-[03:44.40]我的爱恨已入土
-[03:48.96]就这样被你征服
-[03:52.52]切断了所有退路
-[03:56.18]我的心情是坚固
-[04:00.15]我的决定是糊涂
-[04:04.35]就这样被你征服
-[04:08.51]喝下你藏好的毒
-[04:11.92]我的剧情已落幕
-[04:15.83]我的爱恨已入土
-[04:20.19]就这样被你征服
-[04:23.95]切断了所有退路
-[04:27.68]我的心情是坚固
-[04:31.79]我的决定是糊涂
-[04:35.90]就这样被你征服
-[04:39.71]喝下你藏好的毒
-[04:43.32]我的剧情已落幕|[00:00.25]太委屈
-[00:15.50]词曲：陶晶莹
-[00:20.15]演唱：陶晶莹
-[00:23.55]当她横刀夺爱的时候
-[00:27.82]你忘了所有的誓言
-[00:32.36]她扬起爱情胜利的旗帜
-[00:36.64]你要我选择继续爱你的方式
-[00:41.20]你曾经说要保护我
-[00:45.18]只给我温柔没挫折
-[00:50.05]可是现在你总是对我回避
-[00:54.37]不再为我有心事而着急
-[00:58.81]人说恋爱就像放风筝
-[01:03.44]如果太计较就有悔恨
-[01:06.96]只是你们都忘了告诉我
-[01:11.93]放纵的爱
-[01:13.51]也会让天空划满伤痕
-[01:19.27]太委屈
-[01:23.05]连分手也是让我
-[01:25.08]最后得到消息
-[01:28.20]不哭泣
-[01:31.89]因为我对情对爱全
-[01:34.17]都不曾亏欠你
-[01:37.12]太委屈
-[01:40.56]还爱着你
-[01:41.98]你却把别人拥在怀里
-[01:46.05]不能再这样下去
-[01:48.64]穿过爱的暴风雨
-[01:50.45]宁愿清醒忍痛地放弃你
-[01:54.78]也不在爱的梦中委屈自己
-[02:17.33]你曾经说要保护我
-[02:21.43]只给我温柔没挫折
-[02:26.06]可是现在你总是对我回避
-[02:29.88]不再为我有心事而着急
-[02:35.22]人说恋爱就像放风筝
-[02:39.52]如果太计较就有悔恨
-[02:42.72]只是你们都忘了告诉我
-[02:47.70]放纵的爱
-[02:49.43]也会让天空划满伤痕
-[02:55.55]太委屈
-[02:59.05]连分手也是让我
-[03:00.98]最后得到消息
-[03:04.29]不哭泣
-[03:07.87]因为我对情对爱
-[03:09.80]全都不曾亏欠你
-[03:13.31]太委屈
-[03:16.65]爱着你
-[03:17.97]你却把别人拥在怀里
-[03:22.12]不能再这样下去
-[03:24.25]穿过爱的暴风雨
-[03:26.33]宁愿清醒忍痛地放弃你
-[03:30.65]太委屈
-[03:34.26]连分手也是让我
-[03:35.99]最后得到消息
-[03:39.19]不哭泣
-[03:42.48]因为我对情对爱
-[03:44.67]全都不曾亏欠你
-[03:48.17]太委屈
-[03:51.40]爱着你
-[03:52.62]你却把别人拥在怀里
-[03:56.82]不能再这样下去
-[03:59.16]穿过爱的暴风雨
-[04:01.29]宁愿清醒忍痛地放弃你
-[04:05.66]也不在爱的梦中委屈自己|[00:00.35]美丽心情
-[00:18.11]作词：姚谦
-[00:22.61]作曲：中岛美雪
-[00:26.25]演唱：本多RURU
-[00:30.41]多雨的冬季总算过去
-[00:36.17]天空微露淡蓝的晴
-[00:42.17]我在早春清新的阳光里
-[00:48.04]看着当时写的日记
-[00:54.00]原来爱曾给我美丽心情
-[00:59.86]像一面深遂的风景
-[01:05.70]那深爱过他却受伤的心
-[01:11.66]丰富了人生的记忆
-[01:17.60]只有曾天真给过的心
-[01:23.55]才了解等待中的甜蜜
-[01:29.11]也只有被辜负
-[01:32.06]而长夜流过泪的心
-[01:35.86]才能明白这也是种运气
-[01:41.07]让他永远记得
-[01:43.87]曾经有一个人
-[01:47.22]给过完完整整的爱情
-[02:01.90]那曾经爱着他的心情
-[02:08.05]有一股傻傻的勇气
-[02:13.85]那深爱过他却受伤的心
-[02:19.86]丰富了人生的记忆
-[02:25.71]只有曾天真给过的心
-[02:31.66]才了解等待中的甜蜜
-[02:37.27]也只有被辜负
-[02:40.42]而长夜流过泪的心
-[02:44.02]才能明白这也是种运气
-[02:49.07]让他永远记得
-[02:52.15]曾经有一个人
-[02:55.35]给过完完整整的爱情
-[03:28.03]只有曾天真给过的心
-[03:33.98]才了解等待中的甜蜜
-[03:39.53]也只有被辜负
-[03:42.53]而长夜流过泪的心
-[03:46.09]才能明白这也是种运气
-[03:51.25]当我安安心心的走在
-[03:56.15]明天里
-[03:57.50]有不后悔美丽的心情|[00:00.50]我只在乎你
-[00:15.46]作词：慎芝
-[00:18.21]作曲：三木刚
-[00:22.35]演唱：邓丽君
-[00:26.28]如果没有遇见你
-[00:29.64]我将会是在哪里
-[00:32.94]日子过得怎么样
-[00:36.18]人生是否要珍惜
-[00:39.65]也许认识某一人
-[00:42.89]过着平凡的日子
-[00:46.27]不知道会不会
-[00:49.44]也有爱情甜如蜜
-[00:53.22]任时光匆匆流去
-[00:56.12]我只在乎你
-[01:00.82]心甘情愿感染你的气息
-[01:07.42]人生几何能够得到知己
-[01:14.13]失去生命的力量也不可惜
-[01:20.33]所以我求求你
-[01:24.01]别让我离开你
-[01:28.17]除了你 我不能感到
-[01:31.18]一丝丝情意
-[01:52.89]如果有那么一天
-[01:56.21]你说即将要离去
-[01:59.46]我会迷失我自己
-[02:02.73]走入无边人海里
-[02:06.21]不要什么诺言
-[02:09.44]只要天天在一起
-[02:12.86]我不能只依靠
-[02:15.98]片片回忆活下去
-[02:19.78]任时光匆匆流去
-[02:22.74]我只在乎你
-[02:27.30]心甘情愿感染你的气息
-[02:34.00]人生几何能够得到知己
-[02:40.64]失去生命的力量也不可惜
-[02:47.06]所以我求求你
-[02:50.72]别让我离开你
-[02:54.88]除了你 我不能感到
-[02:57.83]一丝丝情意
-[03:08.32]任时光匆匆流去
-[03:11.07]我只在乎你
-[03:15.62]心甘情愿感染你的气息
-[03:22.26]人生几何能够得到知己
-[03:29.09]失去生命的力量也不可惜
-[03:35.16]所以我求求你
-[03:39.17]别让我离开你
-[03:42.98]除了你 我不能感到
-[03:46.46]一丝丝情意|[00:00.50]女人花
-[00:05.00]填词：李安修
-[00:22.25]谱曲：陈耀川
-[00:26.35]编曲：Ricky Ho
-[00:30.15]演唱：梅艳芳
-[00:32.35]我有花一朵
-[00:35.47]种在我心中
-[00:38.73]含苞待放意幽幽
-[00:45.09]朝朝与暮暮
-[00:47.97]我切切地等候
-[00:51.49]有心的人来入梦
-[00:57.35]
-[01:00.48]女人花 摇曳在红尘中
-[01:06.59]女人花 随风轻轻摆动
-[01:13.08]只盼望 有一双温柔手
-[01:19.44]能抚慰 我内心的寂寞
-[01:24.56]
-[01:26.66]我有花一朵
-[01:29.80]花香满枝头
-[01:33.04]谁来真心寻芳踪
-[01:39.46]花开不多时
-[01:42.46]啊堪折直须折
-[01:45.83]女人如花花似梦
-[01:52.50]
-[02:08.32]我有花一朵
-[02:11.47]长在我心中
-[02:14.70]真情真爱无人懂
-[02:20.99]遍地的野草
-[02:24.00]已占满了山坡
-[02:27.44]孤芳自赏最心痛
-[02:31.50]
-[02:33.11]女人花 摇曳在红尘中
-[02:39.49]女人花 随风轻轻摆动
-[02:45.85]只盼望 有一双温柔手
-[02:52.26]能抚慰 我内心的寂寞
-[02:58.65]女人花 摇曳在红尘中
-[03:05.08]女人花 随风轻轻摆动
-[03:11.67]若是你 闻过了花香浓
-[03:17.87]别问我 花儿是为谁红
-[03:24.80]
-[03:28.62]爱过知情重
-[03:31.92]醉过知酒浓
-[03:35.08]花开花谢终是空
-[03:41.38]缘分不停留
-[03:44.27]像春风来又走
-[03:47.79]女人如花花似梦
-[03:51.37]
-[03:54.28]缘分不停留
-[03:57.06]像春风来又走
-[04:00.64]女人如花花似梦
-[04:07.01]女人如花花似梦
-[04:16.50]|[00:00.21]《风中的承诺》
-[00:10.47]作词：吕国梁　作曲：马凯瑞
-[00:13.64]演唱：李翊君
-[00:16.17]昨夜的雨
-[00:19.24]惊醒我沉睡中的梦
-[00:23.46]迷惑的心
-[00:26.37]沾满着昨日的伤痛
-[00:30.83]冷冷的风
-[00:33.66]不再有往日的温柔
-[00:38.16]逝去的爱
-[00:41.11]是否还能够再拥有
-[00:45.49]漫漫长路谁能告诉我
-[00:49.51]究竟会有多少错
-[00:53.18]何处是我最终的居留
-[00:59.19]曾经在雨中对我说
-[01:02.78]今生今世相守
-[01:06.42]曾经在风中对我说
-[01:10.10]永远不离开我
-[01:14.18]多少缠绵编织成的梦
-[01:17.86]多少爱恨刻画的镜头
-[01:21.39]为何一切到了终究还是空
-[01:28.78]《风中的承诺》
-[01:35.65]作词：吕国梁　作曲：马凯瑞
-[01:47.24]演唱：李翊君
-[01:51.51]歌词修订：郑万韬
-[02:01.87]昨夜的雨
-[02:04.92]惊醒我沉睡中的梦
-[02:09.39]迷惑的心
-[02:12.39]沾满着昨日的伤痛
-[02:16.76]冷冷的风
-[02:19.55]不再有往日的温柔
-[02:23.98]逝去的爱
-[02:26.94]是否还能够再拥有
-[02:31.30]漫漫长路谁能告诉我
-[02:35.32]究竟会有多少错
-[02:39.08]何处是我最终的居留
-[02:45.10]曾经在雨中对我说
-[02:48.63]今生今世相守
-[02:52.31]曾经在风中对我说
-[02:55.98]永远不离开我
-[03:00.09]多少缠绵编织成的梦
-[03:03.75]多少爱恨刻画的镜头
-[03:07.44]为何一切到了终究还是空
-[03:13.62]《风中的承诺》
-[03:16.82]作词：吕国梁　作曲：马凯瑞
-[03:21.10]演唱：李翊君
-[03:23.29]歌词修订：郑万韬
-[03:26.50]啊多少缠绵编织成的梦
-[03:32.85]多少爱恨刻画的镜头
-[03:36.47]为何一切到了终究还是空
-[03:42.95]曾经在雨中对我说
-[03:47.16]今生今世相守
-[03:50.68]曾经在风中对我说
-[03:54.39]永远不离开我
-[03:58.48]多少缠绵编织成的梦
-[04:02.12]多少爱恨刻画的镜头
-[04:05.54]为何一切到了终究还是空
-[04:11.99]（曾经在雨中对我说
-[04:16.26]今生今世相守
-[04:19.93]曾经在风中对我说
-[04:23.55]永远不离开我）
-[04:27.62]多少缠绵编织成的梦
-[04:31.28]多少爱恨刻画的镜头
-[04:34.85]为何一切到了终究
-[04:38.36]还是空
-[04:41.31]
-&amp;ff=http://www.wosowoso.com/flash/3h/1wosowoso_flash_7.swf#100#20|http://www.wosowoso.com/flash/5h/woso1_flash_26.swf#70#10#600#320&amp;cdys=ffffff&amp;gcys=D2D2D2&amp;kjys=FCFCFC&amp;yc=0&amp;fs=1&amp;ztdx=2#34&amp;qm=DIY笑看风雨|CDCDC1|1200|810" invokeurls="false" wmode="transparent"></DIV>
+		function shownext(){
+			var active = arr_e.filter(".active").length ? arr_e.filter(".active") : arr_e.first();
+			var next =  active.next().length ? active.next() : arr_e.first();
+			active.css({"z-index": 9});
+			next.css({opacity: 0.0, "z-index": 10}).addClass('active').animate({opacity: 1.0}, o.animate, function(){
+				active.removeClass('active').css({"z-index": 8});
+			});
+		}
 
-<div style="Z-INDEX: 3; position: absolute; top: 112px; left: +18px">
-<a href="/class.asp?class_ID=272" style="text-decoration:none"
-onMouseOver="document.all.menulayer_1.style.visibility=''"
-onMouseOut="document.all.menulayer_1.style.visibility='hidden'">
-<FONT face=隶书 color=#cccccc size=5>专辑封面</FONT></a>
-
-<div id="menulayer_1" class="menulayer" style="visibility: hidden; padding: 0px 0px 0px 0px;">
-
-<TABLE bordercolor="#ADADAD" cellspacing="1" cellpadding="1" width="480" bgcolor="#E0E0E0" height="648" background="https://i.loli.net/2017/09/10/59b4ebe5b804d.jpg" border="1"><TBODY><TR><TD>
-<EMBED height=648 type=application/x-shockwave-flash width=480 src=http://dashan.gotoip1.com/tpll/qhbkwtzd.swf allownetworking="internal" flashvars="tp=https://i.loli.net/2017/09/10/59b4ebe601d1f.jpg|https://i.loli.net/2017/09/10/59b4ebe5b804d.jpg&amp;cc=480*648" allowscriptaccess="never" quality="high" invokeurls="false" wmode="transparent">
-</TD></TR></TBODY></TABLE></DIV></DIV>
-
-<div style="position: absolute; top: +150px; left: +20px">
-<TABLE cellSpacing=1 cellPadding=0 width=680 border=0>
-<TBODY>
-<TR>
-<TD>
-<P align="left"><MARQUEE scrollAmount=2 scrollDelay=100 direction=right><div class="one">
-<div class="text1"><div class="body">专辑名称：《中国十大国语老歌·女人篇HD3CD》<br><br>
-专辑艺人：群星<br><br>
-发行公司：广州市新海文化传媒有限公司<br><br>
-出版社：云南音像出版社<br><br>
-ISRC编码：CN-29-11-424-00/A.J6<br><br>
-发行时间：2016年<br><br>
-资源格式：正版原抓WAV/CUE<br><br><br>
-专辑介绍：</div></div><br>
-<div class="text">&nbsp;&nbsp;经典回顾，首首好歌。<br>
-&nbsp;&nbsp;曾经熟悉的乐坛靓音，如今在耳边响起。<br>
-&nbsp;&nbsp;发烧新理念24K无损HIFIHQCD,顶级发烧器材专用监听产品；<br>
-&nbsp;&nbsp;顶级最具有视厅效果的发烧原音，试机宝贝中的典范；<br>
-&nbsp;&nbsp;至尊享受并超越完美音质的顶级发烧大碟。<br><br><br>
-<div class="text1"><div class="body">专辑曲目：<br><br>
-CD1</div></div>
-一.征服--那英<br><br>
-二.至少还有你--林忆莲<br><br>
-三.记事本--陈慧琳<br><br>
-四.领悟--辛晓琪<br><br>
-五.囚鸟--彭羚<br><br>
-六.如果没有你--莫文蔚<br><br>
-七.太委屈--陶晶莹<br><br>
-八.勇气--梁静茹<br><br>
-九.相见恨晚--彭佳慧<br><br>
-十.后来--刘若英<br><br>
-十一.一生痴恋--王馨平<br><br>
-十二.独角戏--许茹芸<br><br>
-十三.哭砂--黄莺莺<br><br>
-十四.城里的月光--许美静<br><br>
-十五.漂洋过海来看你--娃娃<br><br>
-<div class="text1"><div class="body">CD2</div></div>
-一.橄榄树--齐豫<br><br>
-二.你的眼神--蔡琴<br><br>
-三.值得--郑秀文<br><br>
-四.听海--张惠妹<br><br>
-五.心痛--陈洁仪<br><br>
-六.美丽心情--本多RURU<br><br>
-七.红豆--王菲<br><br>
-八.梦醒时分--陈淑桦<br><br>
-九.别问我是谁--王馨平<br><br>
-十.爱情的故事--方季惟<br><br>
-十一.新不了情--万芳<br><br>
-十二.我是不是你最疼爱的人--潘越云<br><br>
-十三.爱我的人和我爱的人--裘海正<br><br>
-十四.我曾用心的爱着你--潘美辰<br><br>
-十五.我只在乎你--邓丽君<br><br>
-<div class="text1"><div class="body">CD3</div></div>
-一.最浪漫的事--赵咏华<br><br>
-二.说你爱我--陈淑桦<br><br>
-三.女人花--梅艳芳<br><br>
-四.为爱痴狂--刘若英<br><br>
-五.舍不得把眼睛睁开--李度<br><br>
-六.短发--梁咏琪<br><br>
-七.爱的代价--张艾嘉<br><br>
-八.河流--柯以敏<br><br>
-九.牵手--苏芮<br><br>
-十.爱江山更爱美人--李丽芬<br><br>
-十一.像雾像雨又像风--梁雁翎<br><br>
-十二.风中的承诺--李翊君<br><br>
-十三.女人何苦为难女人--辛晓琪<br><br>
-十四.爱上一个不回家的人--林忆莲<br><br>
-十五.执迷不悔--王菲</div>
-</div></MARQUEE></P></TD></TR></TBODY></TABLE></DIV>
-
-<div class="box"> 
-    <div class="f2">
-<div style="Z-INDEX: 3; position: absolute; top: +743px; left: +1230px">
-<A title="点击WAV网盘下载 密码：ehxy" style="COLOR: #a1a4b7; TEXT-DECORATION: none" href="http://pan.baidu.com/s/1boX3wwJ" target="_blank"><img width="40" src="https://i.loli.net/2017/07/23/597406ae69806.png" height="40" class="opacity"></A></div>
-</div>  
-</div>  
-<style type="text/css">  
-.box{  
-    margin:0 auto;  
-}  
-.box img{  
-    width:40px;  
-    height:40px;  
-}   
-.f2{  
-    float:left;  
-    padding-left:20px;  
-}   
-.opacity{  
-    opacity:0.4;  
-    filter:alpha(opacity=40)i; 
-}  
-.opacity:hover{  
-    opacity:1;  
-    filter:alpha(opacity=100 ); 
-}  
-.body{
-font-weight:bold;
-margin: 0;padding: 0;line-height: 20px;letter-spacing: 1px;font-family: Georgia, "Times New Roman", Times, serif;font-size: 19px;color: #fff;
-    text-shadow: 1px 1px 0 #000,-1px -1px 0 #000; repeat-x top}
-.text{       
-      width: 1420px;
-      text-align: right|top;
-      font-size: 18px;
-      font: bold 18px/20px "华文楷体", "Lucida Grande", "Lucida Sans", Helvetica, Arial, Sans;;
-      color: #fff;
-      text-shadow: 2px 2px 0 #000,-1px -1px 0 #000;}
-.text1{font-weight:bold} 
-.one {    
-    margin: 0 auto;    
-    height: 700px;    
-    writing-mode: vertical-rl;
-    writing-mode: tb-rl; 
-} 
-</style> 
-</td></tr></tbody></table></DIV>     
+		arr_e.first().css({"z-index": 9});
+		setInterval(function(){
+			shownext();
+		},o.speed);
+		
+	});
+};
+</script>
+     </body>
+ </html>
