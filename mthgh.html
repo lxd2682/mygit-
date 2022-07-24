@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+<title>~~ 明天会更好 ~~</title>
+<link rel="stylesheet" href="https://www.umming.com/demo/MediaElement/css/style.css">
+<link rel="stylesheet" href="https://www.umming.com/demo/MediaElement/css/mediaelementplayer.min.css" /> 
+ <link href='http://fonts.googleapis.com/css?family=http://fonts.googleapis.com/css?family=Noto+Serif+SC|Great+Vibes|Inconsolata|Satisfy|Josefin+Sans' rel='stylesheet' type='text/css'>
+<style>
+* {
+margin: 0;
+padding: 0;
+}
+.bg {
+/* 歌词调整区 */
+width: 100%;/* 歌词显示盒子宽 */
+height: 160px;/* 歌词显示盒子高度，需要多显示几行歌词相应调大即可 */
+line-height: 160px;
+margin: -160px auto 0;
+color: white;filter:drop-shadow(DimWhite 1px 0 0)drop-shadow(DimWhite 0 1px 0)drop-shadow(DimWhite -1px 0 0) drop-shadow(DimWhite 0 -1px  0)contrast(100%);/* 歌词默认颜色,灰色 */
+font-size: 22px;/* 歌词字体默认大小 */
+overflow: hidden;
+position: absolute;
+font-family: 'Inconsolata', cursive;
+Z-INDEX: 999;
+}
+.bg ul {
+width: 100%;
+position: absolute;
+top: 0;
+left: 0;
+list-style: none;
+}
+.bg ul li {
+width: 100%;
+height: 30px;
+line-height: 30px;
+text-align: center;
+}
+.bg ul li.active {
+color: red;filter:drop-shadow(White 1px 0 0)drop-shadow(White 0 1px 0)drop-shadow(White -1px 0 0) drop-shadow(White 0 -1px  0)contrast(100%);
+font-size: 26px; 
+margin-top: 20px;
+margin-bottom: 20px;
+}
+audio {
+width: 100%; /* 调整播放器宽度 */
+height: 50px;
+/* 其他要修改播放器在这里修改 */
+display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+position: absolute;
+border-radius: 2px;
+background-image: linear-gradient(45deg, rgba(245,245,245,1) 0%, rgba(245,245,245,1) 100%);
+Z-INDEX: 999;
+}
+audio::-webkit-media-controls-panel{
+background-color: rgba(245,245,245,1);
+}
+.ds{
+width: 40px;
+height: 40px;
+background-color: rgba(245,245,245,.3);
+}
+</style>
+<style type="text/css">
+.tp {
+  position: absolute;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: opacity 2s linear;
+  -moz-transition: opacity 2s linear;
+  -o-transition: opacity 2s linear;
+  transition: opacity 2s linear;
+  opacity:0;
+}
+#tu1 {
+  background: url(https://img.photouploads.com/file/PhotoUploads-com/Myhc.jpg) no-repeat;
+  background-size: cover;
+}
+#tu2 {
+  background: url(https://img.photouploads.com/file/PhotoUploads-com/Myhm.jpg) no-repeat;
+  background-size: cover;
+}
+#tu3 {
+  background: url(https://img.photouploads.com/file/PhotoUploads-com/Myh7.jpg) no-repeat;
+  background-size: cover;
+}
+#tu4 {
+  background: url(https://img.photouploads.com/file/PhotoUploads-com/MyhG.jpg) no-repeat;
+  background-size: cover;
+}
+#tu5 {
+  background: url(https://img.photouploads.com/file/PhotoUploads-com/Myhb.jpg) no-repeat;
+  background-size: cover;
+}
+#tu6 {
+  background: url(https://s3.bmp.ovh/imgs/2022/07/23/98ab9baf438df837.jpg) no-repeat;
+  background-size: cover;
+}
+#tu7 {
+  background: url(https://img.photouploads.com/file/PhotoUploads-com/MynE.jpg) no-repeat;
+  background-size: cover;
+}
+#tu8 {
+  background: url(https://img.photouploads.com/file/PhotoUploads-com/MynM.jpg) no-repeat;
+  background-size: cover;
+}
+#tu9 {
+  background: url(https://img.photouploads.com/file/PhotoUploads-com/MynS.jpg) no-repeat;
+  background-size: cover;
+}
+#tu10 {
+  background: url(https://img.photouploads.com/file/PhotoUploads-com/Mynj.jpg) no-repeat;
+  background-size: cover;
+}
+#tu11 {
+  background: url(https://img.photouploads.com/file/PhotoUploads-com/Myno.jpg) no-repeat;
+  background-size: cover;
+}
+#tu12 {
+  background: url(https://img.photouploads.com/file/PhotoUploads-com/Mynp.jpg) no-repeat;
+  background-size: cover;
+}
+#tu13 {
+  background: url(https://img.photouploads.com/file/PhotoUploads-com/Mynx.jpg) no-repeat;
+  background-size: cover;
+}
+#tu14 {
+  background: url(https://img.photouploads.com/file/PhotoUploads-com/Myn0.jpg) no-repeat;
+  background-size: cover;
+}
+#tu15 {
+  background: url(https://img.photouploads.com/file/PhotoUploads-com/MynR.jpg) no-repeat;
+  background-size: cover;
+}
+#tu16 {
+  background: url(https://s3.bmp.ovh/imgs/2022/07/23/f2105accccd9a859.jpg) no-repeat;
+  background-size: cover;
+}
+#tu17 {
+  background: url(https://img.photouploads.com/file/PhotoUploads-com/Mynv.jpg) no-repeat;
+  background-size: cover;
+}
+#tu18 {
+  background: url(https://img.photouploads.com/file/PhotoUploads-com/MynF.jpg) no-repeat;
+  background-size: cover;
+}
+#tu19 {
+  background: url(https://img.photouploads.com/file/PhotoUploads-com/MynH.jpg) no-repeat;
+  background-size: cover;
+}
+.fadein-1 {
+  opacity: 100;
+  filter: alpha(opacity=100);
+}
+</style>
+</head>
+<body>
+<div align="center">
+<TABLE style="POSITION:relative; margin-top: 20px;" bordercolor="#FFF" cellspacing="1" cellpadding="1" width="1280" bgcolor="#BDBDBD" height="770" border="2"><TBODY><TR><TD>
+
+<TABLE style="POSITION: absolute; top:0; left:0; width:1280px; height:720px" background="https://img.photouploads.com/file/PhotoUploads-com/MynN.jpg"><TBODY><TR><TD style="line-height:0">
+<DIV style="WIDTH: 1280px; HEIGHT: 720px; LEFT: 0px; TOP: 0px">
+ <div id="imgss">
+  <div id="tu1" class="tp"></div>
+  <div id="tu2" class="tp"></div>
+  <div id="tu3" class="tp"></div>
+  <div id="tu4" class="tp"></div>
+  <div id="tu5" class="tp"></div>
+  <div id="tu6" class="tp"></div>
+  <div id="tu7" class="tp"></div>
+  <div id="tu8" class="tp"></div>
+  <div id="tu9" class="tp"></div>
+  <div id="tu10" class="tp"></div>
+  <div id="tu11" class="tp"></div>
+  <div id="tu12" class="tp"></div>
+  <div id="tu13" class="tp"></div>
+  <div id="tu14" class="tp"></div>
+  <div id="tu15" class="tp"></div>
+  <div id="tu16" class="tp"></div>
+  <div id="tu17" class="tp"></div>
+  <div id="tu18" class="tp"></div>
+  <div id="tu19" class="tp"></div>
+</div>
+    <script>
+function fadeIn(e) {
+  e.className = "tp fadein-1"
+};
+function fadeOut(e) {
+  e.className = "tp"
+};
+cur_img = document.getElementById("imgss").children.length - 1;
+function turnImgs(imgss) {
+    var imgss = document.getElementById("imgss").children;
+    if (cur_img == 0) {
+      fadeOut(imgss[cur_img]);
+      cur_img = imgss.length - 1;
+      fadeIn(imgss[cur_img]);
+    } else {
+      fadeOut(imgss[cur_img]);
+      fadeIn(imgss[cur_img - 1]);
+      cur_img--;
+    }
+  }
+setInterval(turnImgs, 5000);
+    </script>
+</DIV>
+<div style="Z-INDEX: 11; position: absolute; top: +4px; left: +1236px">
+<img width="40"  src="https://i.loli.net/2017/10/05/59d5f6bbb5b5f.png" height="39" class="ds"></A>
+</div>
+</TD></TR></TBODY></TABLE>
+
+<div style="z-index:9999;position: absolute; top: 0px; left: 0px">
+<table width="120" height="20" border="0" cellpadding="0" cellspacing="0" border="0"><tr><td id="showbfq" height="20" align="center" bgcolor="#CDCDCD" onclick="if(bfq.style.display=='none'){bfq.style.display='';showbfq.innerText='隐藏';}else{bfq.style.display='none';showbfq.innerText='点击播放视频';}">点击播放视频</td></tr>
+<tr><td height="750" align="center" bgcolor="#000000" id="bfq" style="display:none;">
+<script src="https://www.umming.com/demo/MediaElement/js/jquery-1.11.0.min.js"></script>  
+<script src="https://www.umming.com/demo/MediaElement/js/mediaelement-and-player.min.js"></script>
+<div class="wrap">
+   <video width="1280" height="750" src="https://kvideo01.youju.sohu.com/a3cb8d09-e5d3-4c34-94dd-f5aace64a8f52_0_0.mp4" type="video/mp4" id="player" poster="https://img.photouploads.com/file/PhotoUploads-com/MyCY.png" controls="controls" preload="">您的浏览器不支持 video 标签。</video>
+<script type="text/javascript">
+ $('#player').mediaelementplayer();
+</script> 
+</td></tr></table></div>
+
+</TD>
+ <TR><TD height="50">
+<div style="top: 0px; left: 0px">
+<center>
+<div class="bg"></div> 
+<audio autoplay="autoplay" src="https://music.163.com/song/media/outer/url?id=5285415.mp3" controls></audio></center>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+</div>
+</TD></TR></TBODY></TABLE></div>
+
+<script type="text/javascript">
+$(function() {
+function parseLyric(text) {
+//按行分割歌词
+let lyricArr = text.split('\n');
+//console.log(lyricArr)//0: "[ti:七里香]" "[ar:周杰伦]"...
+let result = []; //新建一个数组存放最后结果
+//遍历分割后的歌词数组，将格式化后的时间节点，歌词填充到result数组
+for (i = 0; i < lyricArr.length; i++) {
+let playTimeArr = lyricArr[i].match(/\[\d{2}:\d{2}((\.|\:)\d{2})\]/g); //正则匹配播放时间
+let lineLyric = "";
+if (lyricArr[i].split(playTimeArr).length > 0) {
+lineLyric = lyricArr[i].split(playTimeArr);
+}
+if (playTimeArr != null) {
+for (let j = 0; j < playTimeArr.length; j++) {
+let time = playTimeArr[j].substring(1, playTimeArr[j].indexOf("]")).split(":");
+//数组填充
+result.push({
+time: (parseInt(time[0]) * 60 + parseFloat(time[1])).toFixed(4),
+content: String(lineLyric).substr(1)
+});
+}
+}
+}
+return result;
+}
+// 这里请按照格式放入相应歌词--开始
+// 格式可能看着很复杂,其实是根据lrc歌词文件换句前加入\n 换行符,然后删除多余空行.即可!
+let text = "[00:00.60]明天会更好\n[00:01.41]作词：罗大佑\n[00:01.57]作曲：罗大佑\n[00:25.96]蔡琴：轻轻敲醒沉睡的心灵\n[00:29.05]慢慢张开你的眼睛\n[00:32.28]余天：看看忙碌的世界\n[00:34.16]是否依然孤独的转个不停\n[00:39.06]苏芮：春风不解风情\n[00:42.35]吹动少年的心\n[00:45.33]潘越云：让昨日脸上的泪痕\n[00:48.42]随记忆风干了\n[00:53.20]甄妮：抬头寻找天空的翅膀\n[00:56.39]候鸟出现它的影迹\n[00:59.63]李建复：带来远处的饥荒\n[01:01.51]无情的战火依然存在的消息\n[01:06.46]林慧萍：玉山白雪飘零\n[01:09.65]燃烧少年的心\n[01:12.83]王芷蕾：使真情溶化成音符\n[01:15.77]倾诉遥远的祝福\n[01:20.98]黄莺莺：唱出你的热情\n[01:22.45]伸出你双手\n[01:24.17]让我拥抱着你的梦\n[01:27.46]让我拥有你真心的面孔\n[01:33.89]洪荣宏：让我们的笑容\n[01:35.56]充满着青春的骄傲\n[01:40.06]为明天献出虔诚的祈祷\n[01:46.38]陈淑桦：谁能不顾自己的家园\n[01:49.62]抛开记忆中的童年\n[01:52.75]金智娟：谁能忍心看他昨日的忧愁\n[01:56.45]带走我们的笑容\n[01:59.69]王梦麟：青春不解红尘\n[02:02.88]胭脂沾染了灰\n[02:05.86]李佩菁：让久违不见的泪水\n[02:08.94]滋润了你的面容\n[02:14.20]费玉清：唱出你的热情\n[02:15.82]伸出你双手\n[02:17.44]让我拥抱着你的梦\n[02:20.63]让我拥有你真心的面孔\n[02:27.06]让我们的笑容\n[02:28.68]充满着青春的骄傲\n[02:33.34]为明天献出虔诚的祈祷\n[02:43.13]齐豫：轻轻敲醒沉睡的心灵\n[02:46.07]慢慢张开你的眼睛\n[02:49.25]郑怡：看那忙碌的世界\n[02:51.27]是否依然孤独的转个不停\n[02:56.13]江蕙：日出唤醒清晨\n[02:59.32]大地光彩重生\n[03:02.41]杨林：让和风拂出的音响\n[03:05.40]谱成生命的乐章\n[03:10.66]合：唱出你的热情\n[03:12.45]伸出你双手\n[03:13.82]让我拥抱着你的梦\n[03:17.10]让我拥有你真心的面孔\n[03:23.53]让我们的笑容\n[03:25.15]充满着青春的骄傲\n[03:29.75]让我们期待明天会更好\n[03:36.43]合：唱出你的热情\n[03:38.00]伸出你双手\n[03:39.62]让我拥抱着你的梦\n[03:42.91]让我拥有你真心的面孔\n[03:49.34]让我们的笑容\n[03:50.91]充满着青春的骄傲\n[03:55.50]让我们期待明天会更好\n[04:02.24]苏芮/齐秦：唱出你的热情\n[04:03.81]伸出你双手\n[04:05.48]让我拥抱着你的梦\n[04:08.67]让我拥有你真心的面孔\n[04:15.14]让我们的笑容\n[04:16.76]充满着青春的骄傲\n[04:21.31]让我们期待明天会更好\n[04:28.03]余天/苏芮：唱出你的热情\n[04:29.65]伸出你双手\n[04:31.26]让我拥抱着你的梦\n[04:34.50]让我拥有你真心的面孔\n[04:40.97]让我们的笑容\n[04:42.54]充满着青春的骄傲\n[04:46.99]让我们期待明天会更好\n[04:53.81]唱出你的热情\n[04:55.43]伸出你双手\n[04:57.05]让我拥抱着你的梦\n[05:00.34]让我拥有你真心的面孔\n[05:06.70]让我们的笑容\n[05:08.32]充满着青春的骄傲\n[05:13.13]让我们期待明天会更好";
+// 这里请按照格式放入相应歌词--结束
+let audio = document.querySelector('audio');
+let result = parseLyric(text); //执行lyc解析
+// 把生成的数据显示到界面上去
+let $ul = $("<ul></ul>");
+for (let i = 0; i < result.length; i++) {
+let $li = $("<li></li>").text(result[i].content);
+$ul.append($li);
+}
+$(".bg").append($ul);
+let lineNo = 0; // 当前行歌词
+let preLine =1; // 当播放6行后开始滚动歌词
+let lineHeight = -30; // 每次滚动的距离
+// 滚动播放 歌词高亮 增加类名active
+function highLight() {
+let $li = $("li");
+$li.eq(lineNo).addClass("active").siblings().removeClass("active");
+if (lineNo > preLine) {
+$ul.stop(true, true).animate({ top: (lineNo - preLine) * lineHeight });
+}
+}
+highLight();
+// 播放的时候不断渲染
+audio.addEventListener("timeupdate", function() {
+if (lineNo == result.length) return;
+if ($("li").eq(0).hasClass("active")) {
+$("ul").css("top", "0");
+}
+lineNo =getLineNo(audio.currentTime);
+highLight();
+lineNo++;
+});
+// 当快进或者倒退的时候，找到最近的后面那个result[i].time
+function getLineNo(currentTime) {
+if (currentTime >= parseFloat(result[lineNo].time)) {
+// 快进
+for (let i = result.length - 1; i >= lineNo; i--) {
+if (currentTime >= parseFloat(result[i].time)) {
+return i;
+}
+}
+} else {
+// 后退
+for (let i = 0; i <= lineNo; i++) {
+if (currentTime <= parseFloat(result[i].time)) {
+return i - 1;
+}
+}
+}
+}
+//播放结束自动回到开头
+audio.addEventListener("ended", function() {
+lineNo = 0;
+highLight();
+audio.play();
+$("ul").css("top", "0");
+});
+});
+</script>
+</body>
+</html>
